@@ -1,0 +1,18 @@
+# Executable for all unit tests with list of sources
+# For example, you may have one ∗_test.cpp for each ∗.cpp in sim
+cmake_minimum_required(VERSION 3.26)
+add_executable(utest
+        block_test.cpp
+        grid_test.cpp
+        ../constantes.hpp
+        progargs_test.cpp
+        constantes_pruebas.hpp)
+# Library dependencies
+target_link_libraries (utest
+        PRIVATE
+        sim
+        GTest::gtest_main
+        Microsoft.GSL::GSL)
+# Discover all tests and add them to the test driver
+include(GoogleTest)
+gtest_discover_tests(utest)

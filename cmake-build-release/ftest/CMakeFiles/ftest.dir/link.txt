@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -march=native CMakeFiles/ftest.dir/funcional_test.cpp.o -o ftest  ../sim/libsim.a ../lib/libgtest_main.a ../lib/libgtest.a 
